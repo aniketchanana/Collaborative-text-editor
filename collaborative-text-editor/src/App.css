@@ -1,0 +1,15 @@
+.App{
+  height: 100vh;
+  display: flex;
+}
+
+.editorArea {
+  width: 70%;
+  height: 100%;
+}
+
+.displayUsersArea {
+  width: 30%;
+  border-left: 1px solid rgba(0,0,0,0.4);
+  height: 100%;
+}

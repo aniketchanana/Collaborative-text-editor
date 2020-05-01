@@ -1,0 +1,9 @@
+.editorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+textarea{
+    font-size: 18px;
+}
