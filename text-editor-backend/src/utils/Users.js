@@ -4,7 +4,7 @@ function adduser(username,id) {
     const newUser = {
         _id:id,
         username,
-        isPresenting:users.length === 0 ? true : false
+        isPresenting:false
     }
     users.push(newUser);
 }
@@ -24,8 +24,18 @@ function removeUser(id) {
 function getAllUsers() {
     return users;
 }
+
+function changePresentingStatus(clientId,status,callback) {
+    for(let i=0;i<users.length;i++) {
+        if(users[i]._id  === clientId) {
+            users[i].isPresenting = status 
+        }
+    }
+    callback();
+}
 module.exports = {
     adduser,
     removeUser,
     getAllUsers,
+    changePresentingStatus,
 }
